@@ -1,0 +1,28 @@
+{
+    "name": "起点伪装",
+    "version": "1.0",
+    "manifest_version": 3,
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "interceptor.js",
+                "styles.css",
+                "icon.ico"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.qidian.com/chapter/*/*"
+            ],
+            "js": [
+                "content-script.js"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}
