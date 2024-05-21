@@ -1,4 +1,4 @@
-document.title = 'useEffect-搜索'
+document.title = 'useEffect - 搜索'
 
 const customIconHref = document.querySelector('#__customIconHref').dataset.value
 function changeIcon() {
