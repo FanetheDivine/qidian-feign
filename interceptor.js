@@ -10,3 +10,18 @@ function changeIcon() {
     }
 }
 changeIcon()
+
+async function getContent() {
+    const contentNode = document.querySelector('#vite-plugin-ssr_pageContext')
+    if (!contentNode) {
+        return new Promise(resolve => {
+            setTimeout(() => resolve(getContent()), 0)
+        })
+    } else {
+        return JSON.parse(contentNode.innerHTML).pageContext.pageProps.pageData.chapterInfo.content.split('<p>')
+    }
+}
+
+getContent().then(content => {
+    alert(JSON.stringify(content))
+})
