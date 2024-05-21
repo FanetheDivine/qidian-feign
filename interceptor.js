@@ -12,13 +12,13 @@ function changeIcon() {
 changeIcon()
 
 async function getContent() {
-    const contentNode = document.querySelector('#vite-plugin-ssr_pageContext')
-    if (!contentNode) {
+    const contentNodes = [...document.querySelectorAll('.content-text')]
+    if (contentNodes.length > 0) {
+        return contentNodes.map(dom => dom.innerText)
+    } else {
         return new Promise(resolve => {
             setTimeout(() => resolve(getContent()), 0)
         })
-    } else {
-        return JSON.parse(contentNode.innerHTML).pageContext.pageProps.pageData.chapterInfo.content.split('<p>')
     }
 }
 
