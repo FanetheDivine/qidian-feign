@@ -22,6 +22,33 @@ async function getContent() {
     }
 }
 
+const iframe = document.createElement('iframe')
+iframe.style = 'position:fixed;width:100%;height:100%;'
+iframe.src = 'https://cn.bing.com/search?q=useEffect'
+document.documentElement.appendChild(iframe)
+
 getContent().then(content => {
-    alert(JSON.stringify(content))
+    // const functionStr =
+    //     `
+    // alert(1)
+    // function __setContent(){
+    //     const dom = document.querySelector("b_caption")
+    //     if(!dom){
+    //         console.log(1)
+    //         setTimout(__setContent,1000)
+    //     }
+    //     else{
+    //         dom.innerHTML =
+    //         \`
+    //         <div style='width:600px;height:130px;overflow:auto;'>
+    //             ${content.map(p => `<span>${p}</span><br>`)}
+    //         </div>
+    //         \`
+    //     }
+    // }
+    // __setContent()
+    // `
+    // const script = iframe.contentDocument.createElement('script')
+    // script.innerHTML = functionStr
+    // iframe.contentDocument.documentElement.appendChild(script)
 })
