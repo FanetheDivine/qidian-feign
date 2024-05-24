@@ -6,7 +6,6 @@
         {
             "resources": [
                 "interceptor.js",
-                "styles.css",
                 "icon.ico"
             ],
             "matches": [
