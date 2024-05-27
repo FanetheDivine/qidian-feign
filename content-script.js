@@ -49,5 +49,6 @@ document.documentElement.appendChild(target)
 
 const iframe = document.createElement('iframe')
 iframe.className = '-qidian-feign'
-iframe.src = 'https://cn.bing.com/search?q=useEffect'
+iframe.src = ['https://cn.bing.com/search?q=useEffect', 'https://zh-hans.react.dev/reference/react/useEffect', 'https://nextjs.org/docs', 'https://zenn.dev/hayato94087/articles/08d63958b57fbe', 'https://ant-design.antgroup.com/components/app-cn']
+  .sort(() => Math.random() - 0.5)[0]
 document.documentElement.appendChild(iframe)
