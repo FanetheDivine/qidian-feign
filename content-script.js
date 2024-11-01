@@ -31,6 +31,14 @@ body {
 .-qidian-content::-webkit-scrollbar{
   display:none;
 }
+
+.-qidian-content main p.content-text{
+  margin-top:0 !important;
+}
+
+.-qidian-content main{
+  line-height:1.2 !important;
+}
 `
 document.documentElement.appendChild(styles)
 
