@@ -39,6 +39,10 @@ body {
 .-qidian-content main{
   line-height:1.2 !important;
 }
+
+.-qidian-content main .review{
+  display:none
+}
 `
 document.documentElement.appendChild(styles)
 
