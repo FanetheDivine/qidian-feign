@@ -26,9 +26,8 @@ getContent().then(content => {
     const contentDom = document.createElement('div')
     contentDom.className = '-qidian-content'
     contentDom.innerHTML =
-        `
-    ${content.map(p => `<span>${p}</span><br>`).join('')}
-    `
+        document.querySelector('h1.title').outerHTML +
+        document.querySelector('main').outerHTML
     contentDom.addEventListener('wheel', e => {
         e.preventDefault()
         contentDom.scrollBy({
